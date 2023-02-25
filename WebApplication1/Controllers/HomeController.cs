@@ -12,6 +12,7 @@ public class HomeController : Controller
     private readonly ILogger<HomeController> _logger;
     private readonly IConfiguration _configuration;
     public string Test = "Meow";
+    public int SomeNum = 0;
     
     public HomeController(ILogger<HomeController> logger, IConfiguration configuration)
     {
@@ -23,7 +24,7 @@ public class HomeController : Controller
     {
         string? connectionString = _configuration.GetConnectionString("TestDBConnection");
 
-        var optionsBuilder = new DbContextOptionsBuilder<TestDbContext>();
+        //var optionsBuilder = new DbContextOptionsBuilder<TestDbContext>();
         return View();
     }
 
