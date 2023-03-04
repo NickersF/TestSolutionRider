@@ -1,28 +1,20 @@
 ﻿using System.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.Extensions.Configuration;
 using WebApplication1.Models;
-using System.Data.SqlClient;
-using System.Reflection;
-using System.Text.Json.Serialization;
-using Microsoft.EntityFrameworkCore;
 using Newtonsoft.Json;
 
 namespace WebApplication1.Controllers
 {
     public class HomeController : Controller
     {
-        private readonly ILogger<HomeController> _logger;
-        private readonly IConfiguration _configuration;
         public TestModel NewTestModel = new TestModel();
         public string Test = "Meow";
         public int SomeNum = 0;
     
-        public HomeController(ILogger<HomeController> logger, IConfiguration configuration)
-        {
-            _logger = logger;
-            _configuration = configuration;
-        }
+        // public HomeController()
+        // {
+        //     
+        // }
     
         public IActionResult Index()
         {
@@ -32,17 +24,48 @@ namespace WebApplication1.Controllers
         [HttpGet]
         public JsonResult GetModelProps()
         {
-            var props = NewTestModel.GetType().GetProperties()
-                .Select(p => new
-                {
-                    Name = p.Name,
-                    Type = Nullable.GetUnderlyingType(p.PropertyType) ?? p.PropertyType
+            TestModel model = new TestModel();
+
+            var props = model.GetType().GetProperties()
+                .Select(p => new {
+                    p.Name,
+                    Type = GetTypeName(p.PropertyType)
                 })
-                .ToDictionary(p => p.Name, p => p.Type == typeof(int) ? "number" : p.Type.Name.ToLower());
+                .ToDictionary(p => p.Name, p => p.Type);
+
+            string json = JsonConvert.SerializeObject(props);
             
-            string modelAsJson = JsonConvert.SerializeObject(props);
-            
-            return Json(modelAsJson);
+            return Json(json);
+        }
+
+        public static string GetTypeName(Type type)
+        {
+            if (type == typeof(int) || type == typeof(double) || type == typeof(float)
+                || type == typeof(decimal) || type == typeof(long) || type == typeof(short)
+                || type == typeof(byte) || type == typeof(uint) || type == typeof(ulong)
+                || type == typeof(ushort) || type == typeof(sbyte))
+            {
+                return "number";
+            }
+            else if (type == typeof(bool))
+            {
+                return "boolean";
+            }
+            else if (type == typeof(DateTime))
+            {
+                return "Date";
+            }
+            else if (type.IsGenericType && type.GetGenericTypeDefinition() == typeof(Nullable<>))
+            {
+                // Handle nullable value types
+                Type? underlyingType = Nullable.GetUnderlyingType(type);
+                if (underlyingType != null)
+                {
+                    return GetTypeName(underlyingType);
+                }
+            }
+
+            return type.Name.ToLower();
         }
         public IActionResult Privacy()
         {
