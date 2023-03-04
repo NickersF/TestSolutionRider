@@ -13,6 +13,17 @@ meow();
 
 $("#Meow").on("click", (e) => {
     console.log(e);
+    $("#Meow").removeClass("btn-primary").addClass("btn-danger");
+    
+    $.ajax({
+        type: "GET",
+        global: false,
+        url: "/Home/GetModelProps"
+    }).then((data) => {
+        let parsedModelProps = JSON.parse(data);
+        console.log(data);
+        console.log(parsedModelProps);
+    });
 });
 
 class Cat {

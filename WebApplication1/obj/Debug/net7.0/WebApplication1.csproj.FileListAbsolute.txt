@@ -29,3 +29,15 @@ C:\Source\RiderDemo\TestSolution\WebApplication1\obj\Debug\net7.0\refint\WebAppl
 C:\Source\RiderDemo\TestSolution\WebApplication1\obj\Debug\net7.0\WebApplication1.pdb
 C:\Source\RiderDemo\TestSolution\WebApplication1\obj\Debug\net7.0\WebApplication1.genruntimeconfig.cache
 C:\Source\RiderDemo\TestSolution\WebApplication1\obj\Debug\net7.0\ref\WebApplication1.dll
+C:\Source\RiderDemo\TestSolution\WebApplication1\bin\Debug\net7.0\Microsoft.EntityFrameworkCore.dll
+C:\Source\RiderDemo\TestSolution\WebApplication1\bin\Debug\net7.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+C:\Source\RiderDemo\TestSolution\WebApplication1\bin\Debug\net7.0\Microsoft.Extensions.Caching.Abstractions.dll
+C:\Source\RiderDemo\TestSolution\WebApplication1\bin\Debug\net7.0\Microsoft.Extensions.Caching.Memory.dll
+C:\Source\RiderDemo\TestSolution\WebApplication1\bin\Debug\net7.0\Microsoft.Extensions.DependencyInjection.dll
+C:\Source\RiderDemo\TestSolution\WebApplication1\bin\Debug\net7.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+C:\Source\RiderDemo\TestSolution\WebApplication1\bin\Debug\net7.0\Microsoft.Extensions.Logging.dll
+C:\Source\RiderDemo\TestSolution\WebApplication1\bin\Debug\net7.0\Microsoft.Extensions.Logging.Abstractions.dll
+C:\Source\RiderDemo\TestSolution\WebApplication1\bin\Debug\net7.0\Microsoft.Extensions.Options.dll
+C:\Source\RiderDemo\TestSolution\WebApplication1\bin\Debug\net7.0\Microsoft.Extensions.Primitives.dll
+C:\Source\RiderDemo\TestSolution\WebApplication1\obj\Debug\net7.0\WebApplication1.csproj.CopyComplete
+C:\Source\RiderDemo\TestSolution\WebApplication1\bin\Debug\net7.0\Newtonsoft.Json.dll

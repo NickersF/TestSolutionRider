@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "IbEz25rLgMJFwFJCuuJrUWvAfHYHBJNNCOG9OHJYFmG+SNbJDl79ETHLqqJjXqtMqRqv1GteWvOrDm7PxbLc7Q==",
+  "dgSpecHash": "MpJlViB08ZFFmVywcIK2GBeYLfCHozyqg6JM+p/cZOkT9NL9FmN56V4415TGrkYnc2uHvclo4/L3V6WW3JQKqg==",
   "success": true,
   "projectFilePath": "C:\\Source\\RiderDemo\\TestSolution\\WebApplication1\\WebApplication1.csproj",
   "expectedPackageFiles": [
@@ -14,7 +14,8 @@
     "C:\\Users\\nicke\\.nuget\\packages\\microsoft.extensions.logging\\8.0.0-preview.1.23110.8\\microsoft.extensions.logging.8.0.0-preview.1.23110.8.nupkg.sha512",
     "C:\\Users\\nicke\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\8.0.0-preview.1.23110.8\\microsoft.extensions.logging.abstractions.8.0.0-preview.1.23110.8.nupkg.sha512",
     "C:\\Users\\nicke\\.nuget\\packages\\microsoft.extensions.options\\8.0.0-preview.1.23110.8\\microsoft.extensions.options.8.0.0-preview.1.23110.8.nupkg.sha512",
-    "C:\\Users\\nicke\\.nuget\\packages\\microsoft.extensions.primitives\\8.0.0-preview.1.23110.8\\microsoft.extensions.primitives.8.0.0-preview.1.23110.8.nupkg.sha512"
+    "C:\\Users\\nicke\\.nuget\\packages\\microsoft.extensions.primitives\\8.0.0-preview.1.23110.8\\microsoft.extensions.primitives.8.0.0-preview.1.23110.8.nupkg.sha512",
+    "C:\\Users\\nicke\\.nuget\\packages\\newtonsoft.json\\13.0.3-beta1\\newtonsoft.json.13.0.3-beta1.nupkg.sha512"
   ],
   "logs": []
 }
