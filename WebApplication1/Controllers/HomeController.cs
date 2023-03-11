@@ -1,4 +1,5 @@
 ﻿using System.Diagnostics;
+using CoreDomain;
 using Microsoft.AspNetCore.Mvc;
 using WebApplication1.Models;
 using Newtonsoft.Json;
@@ -25,7 +26,12 @@ namespace WebApplication1.Controllers
         public JsonResult GetModelProps()
         {
             TestModel model = new TestModel();
+            Class1 newClass1 = new Class1();
 
+            newClass1.TestString = "Testing the class library.";
+            
+            Console.WriteLine(newClass1.TestString);
+            
             var props = model.GetType().GetProperties()
                 .Select(p => new {
                     p.Name,
